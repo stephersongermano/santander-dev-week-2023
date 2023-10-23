@@ -15,10 +15,10 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, scale = 12)
+    @Column(unique = true, precision = 12)
     private String number;
 
-    @Column(name = "available_limit", precision = 2, nullable = false)
+    @Column(name = "available_limit", precision = 15, scale = 2, nullable = false)
     private BigDecimal limit;
 
     public Long getId() {
